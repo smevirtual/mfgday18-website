@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebSite">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111698249-7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111698249-7');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Force IE 8/9/10 to use its latest rendering engine -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Celebrate Manufacturing Day 2018 with the SME Virtual Network!">
+  <meta name="keywords" content="engineering, manufacturing, sme, smevirtual, education, mfgday">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <meta name="google" content="nositelinkssearchbox">
+
+  <!-- For Facebook, Reddit and some other social networks -->
+  <!-- Thumbnail size is 500px x 500px -->
+  <meta name="thumbnail"           content="https://mfgday.smevirtual.com/thumbnail.png">
+  <meta property="og:type"         content="website">
+  <meta property="og:title"        content="SME Virtual Network">
+  <meta property="og:description"  content="We work to energize, mobilize and engage the global engineering and manufacturing community via the Internet.">
+
+  <!-- Facebook Card image size is specified in 'og:image:width' and 'og:image:height' -->
+  <meta property="og:image"        content="https://mfgday.smevirtual.com/og_card_thumbnail.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="1200">
+
+  <!-- For Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@smevirtual">
+  <meta name="twitter:creator"     content="@smevirtual">
+
+  <!-- For Google+ (Schema.org) -->
+  <meta itemprop="name" content="SME Virtual Network">
+  <meta itemprop="description" content="We work to energize, mobilize and engage the global engineering and manufacturing community via the Internet.">
+  <!-- Image size is 1920px x 1080px -->
+  <meta itemprop="image" content="https://mfgday.smevirtual.com/rich_snippet.png">
+
+  <title>Manufacturing Day 2018 | SME Virtual Network</title>
+
+  <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+  <% } %>
+
+</head>
+<body>
+  <!--[if IE]>
+    <div class="container-fluid py-2 smev-outdated-banner">
+      <p class="my-0">This site works best when you are using a modern web browser. Please consider <a href="http://outdatedbrowser.com/" target="_blank">upgrading your browser</a> to improve your experience.</p>
+    </div>
+  <![endif]-->
+
+  <div class="container-fluid py-2 smev-outdated-banner" style="display: none">
+    <p class="my-0">This site works best when you are using a modern web browser. Please consider <a href="http://outdatedbrowser.com/" target="_blank">upgrading your browser</a> to improve your experience.</p>
+  </div>
+
+</body>
+</html>
