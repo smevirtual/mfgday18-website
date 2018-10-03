@@ -102,3 +102,7 @@ If you fork this project for use by your own website or web application, you
 must not use SME logos or brands inappropriately. Please see the
 [SME Branding Guidelines](http://www.sme.org/sme-logo/) for when a SME logo
 can be used and what conditions are attached to SME logos and brands.
+
+### Other Media Licenses
+
+- **src/media/digital_factory.mp4** - If you fork this project, you must not use this file in your sites and apps unless you possess the appropriate licence. This video is only granted under a paid license by [Shutterstock](https://www.shutterstock.com/home) for use by the SME Virtual Network.

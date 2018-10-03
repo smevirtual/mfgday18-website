@@ -47,7 +47,7 @@ gulp.task("bundle", callback => {
  * -----------------------------------------------------------------------------
  */
 gulp.task("copy", () =>
-  gulp.src(["src/images/**/*", "src/*.txt", "src/*.json", "src/404.html"]).pipe(gulp.dest("dist"))
+  gulp.src(["src/media/**/*", "src/*.txt", "src/*.json", "src/404.html"]).pipe(gulp.dest("dist"))
 );
 
 /**
@@ -80,7 +80,7 @@ gulp.task("dev-server", () => {
 gulp.task("generate-favicon", done => {
   realFavicon.generateFavicon(
     {
-      masterPicture: "./src/images/master-favicon-512.png",
+      masterPicture: "./src/media/master-favicon-512.png",
       dest: "./dist",
       iconsPath: "/",
       design: {

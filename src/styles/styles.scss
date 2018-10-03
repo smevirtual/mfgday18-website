@@ -11,6 +11,8 @@
 // Bootstrap and Bootstrap Overrides
 // =================================
 
+$enable-transitions: false !default;
+
 // stylelint-disable value-keyword-case
 $font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -20,7 +22,7 @@ $gray-100: #f9f9f9 !default;
 $gray-600: #777677 !default;
 $gray-800: #323232 !default;
 
-$blue: #2d74da !default;
+$blue: #3b6caa !default;
 $orange: #fe8500 !default;
 
 $primary: $orange !default;
@@ -38,47 +40,43 @@ $box-shadow-lg: none !default;
 $link-color: $blue !default;
 $link-hover-color: $orange !default;
 
-$body-color: $gray-800 !default;
+$body-color: #000 !default;
 
 $border-color: #c0bfc0 !default;
+
+$grid-gutter-width: 0 !default;
 
 // Import Bootstrap.
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-.btn-primary {
-  color: $white;
+sub,
+sup {
+  font-size: 1rem;
 }
 
-.btn-outline-primary:hover {
-  color: $white;
+sup {
+  top: -1em;
 }
 
-.card {
-  background-color: $gray-100;
-  border-color: #25467a;
-  border-style: solid;
-  border-width: 0 0 0 5px;
-}
-
-.card-body {
-  border-color: #c0bfc0;
-  border-style: solid;
-  border-width: 1px 1px 1px 0;
+b,
+strong {
+  font-weight: 700;
 }
 
 // Custom Rules
 // ============
 
-// Header
-//
-
 .smev-outdated-banner {
   position: fixed;
   z-index: 1000;
-  background: #fffbdd;
+  background: #fde876;
+
+  a {
+    color: #054ada;
+  }
 
   a:hover {
-    color: $gray-800;
+    color: #000;
   }
 }
 
@@ -94,89 +92,175 @@ $border-color: #c0bfc0 !default;
 }
 // stylelint-enable declaration-no-important
 
-.smev-header {
-  position: absolute;
-  top: 140px;
-  left: 0;
-  z-index: 2;
-  line-height: 70px;
+.smev-home-hero__logo {
+  height: 6rem;
 }
 
-.smev-header__logo {
-  display: inline-block;
-  width: 300px;
-  user-select: none;
-}
-
-.smev-header__brand {
-  display: inline-block;
-  padding-right: 0;
-  padding-left: 30px;
-}
-
-@include media-breakpoint-up(sm) {
-  .smev-header__brand {
-    padding-left: 150px;
+@include media-breakpoint-down(md) {
+  .smev-home-hero__logo {
+    height: 4rem;
   }
 }
 
-.smev-header__brand a {
-  display: inline-block;
-}
-
-.smev-hero {
-  width: 100%;
-  height: 50vh;
-  cursor: pointer;
-}
-
-#particle-field {
-  position: relative;
-  width: 100%;
+.smev-home-hero {
   height: 100%;
+}
+
+.smev-home-hero__wrapper {
+  position: relative;
+  height: 100vh;
   overflow: hidden;
-  background-color: #123;
+  background: #212121;
 }
 
-// Fixed Header
-//
+.sme-home-hero__video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  object-fit: cover;
+}
 
-// Cards
-//
+.smev-home-hero__content {
+  z-index: 1;
+  width: 100%;
+  max-width: 60rem;
+  color: #fff;
+}
 
-.smev-card-photo {
-  width: 100px;
-  height: 100px;
-  filter: grayscale(1);
+.smev-home-hero__heading {
+  font-size: 4rem;
+  font-weight: 400;
+}
 
-  &:hover {
-    filter: grayscale(0);
+.smev-home-hero__subheading {
+  font-size: 2rem;
+}
+
+@include media-breakpoint-down(md) {
+  .smev-home-hero__heading {
+    font-size: 2.5rem;
+  }
+
+  .smev-home-hero__subheading {
+    font-size: 1.5rem;
   }
 }
 
-.sme-card-icon {
-  width: 80px;
-  height: 80px;
+.smev-home-hero__arrow {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  left: 0;
+  display: block;
+  width: 38px;
+  height: 42px;
+  font-size: 4rem;
+  color: #fff;
 }
 
-.smev-card-heading {
-  color: $blue;
-}
-
-.sme-card-logo {
-  width: 100px;
-}
-
-@include media-breakpoint-up(sm) {
-  .sme-card-logo {
-    width: 200px;
+@include media-breakpoint-down(md) {
+  .smev-home-hero__arrow {
+    bottom: 20px;
+    font-size: 2.5rem;
   }
 }
 
-.smev-card__company a {
-  color: $gray-800;
+.smev-content-section__time-badge {
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
-svg:hover path {
-  fill: $orange;
+.smev-content-section__time-badge--light {
+  color: #000;
+  background-color: #fff;
+}
+
+.smev-content-section__time-badge--dark {
+  color: #fff;
+  background-color: #000;
+}
+
+.smev-content-section__smart {
+  color: #fff;
+  background-color: #0530ad;
+}
+
+.smev-content-section__makers {
+  background-color: #fdd600;
+}
+
+.smev-content-section__button--light {
+  color: #fff;
+  border-color: #fff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+    outline: none;
+  }
+}
+
+.smev-content-section__button--dark {
+  color: #000;
+  border-color: #000;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    outline: none;
+  }
+}
+
+.smev-content-section__button--red {
+  color: #fff;
+  background-color: #e71d32;
+  border-color: #e71d32;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: #e71d32;
+    border-color: #e71d32;
+    outline: none;
+  }
+}
+
+.smev-content-section__presenter {
+  font-size: 1.5rem;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .smev-content-section__flair {
+    display: none;
+  }
+}
+
+.smev-footer__info {
+  background: #f2f2f2;
+}
+
+.smev-footer__fp-row {
+  align-items: flex-start;
+}
+
+.smev-footer__fp-links {
+  margin: auto 0;
+
+  & > a {
+    padding-right: 2rem;
+    color: #000;
+  }
 }
