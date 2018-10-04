@@ -121,6 +121,16 @@ strong {
   object-fit: cover;
 }
 
+// Hack to target IE and Edge only.
+// This is because IE and Edge do not support `object-fit: cover` for `video` tags.
+// See https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/13603873/#comment-0
+@supports (-ms-ime-align: auto) {
+  .sme-home-hero__video {
+    width: auto;
+    height: auto;
+  }
+}
+
 .smev-home-hero__content {
   z-index: 1;
   width: 100%;
